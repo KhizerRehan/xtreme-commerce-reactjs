@@ -31,7 +31,7 @@ class Counter extends Component {
     return true;
   }
 
-  componentDidUpdate(prevPropsq, prevState, snapshot) {
+  componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('prevProps', prevProps);
     console.log('prevState', prevState);
     console.log('componentDidUpdate');
