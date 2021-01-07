@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import SearchList from './SearchList';
+import PropTypes from 'prop-types';
 
 class SearchableComponent extends Component {
   constructor(props) {
@@ -44,6 +45,10 @@ class SearchableComponent extends Component {
       }
     </>
   }
+}
+
+SearchList.propTypes = {
+  list: PropTypes.array.isRequired
 }
 
 export default SearchableComponent
