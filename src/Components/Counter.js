@@ -28,6 +28,10 @@ class Counter extends Component {
     console.log('nextProps', nextProps);
     console.log('nextState', nextState);
     console.log('shouldComponentUpdate');
+
+    if (nextState.counter > 30) {
+      return false; // This will prevent to render `Render` method (mostly used for Optimization);
+    }
     return true;
   }
 
