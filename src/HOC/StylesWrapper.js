@@ -1,5 +1,4 @@
 const StylesTransformer = (props) => {
-
   const styles = {
     default : {
       backgroundColor: "green",
@@ -61,11 +60,18 @@ const getButtonTextBasedOnProps = (props) => {
 
 
 const StylesWrapper = (WrappedComponent => {
-
+  // This HOC component returns a new Component with updated props
   return (
     (props) => {
-      debugger;
+
+      // Here new props are added
       const updatedProps = getButtonTextBasedOnProps(props);
+
+      // f(g(x))
+      // StylesTransformer(updatedProps) -> updated props are passed
+      // updatedProps are returned
+      // Those update props are passed to WrapComponent
+      // And Than Wrapped component will be returned with updated props
       return WrappedComponent(StylesTransformer(updatedProps));
     }
   )

@@ -1,6 +1,7 @@
 import React from "react";
 import StylesWrapper from '../HOC/StylesWrapper'
 
+// Here it will come when wrapper HOC component will add on properties
 
 function Button(props) {
   debugger;
@@ -9,5 +10,6 @@ function Button(props) {
   </>
 }
 
+// Your Component will be passed to StylesWrapper Component which is a HOC componnet
 export default StylesWrapper(Button);
 
